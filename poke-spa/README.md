@@ -1,6 +1,6 @@
 # PokeSPA
 
-Single page application que consume la api de [PokeApi](https://pokeapi.co/) y enlista los pokemones 
+Single page application creada con Vuejs CLI y Bulma que consume la api de [PokeApi](https://pokeapi.co/) y enlista los pokemones 
 
 ## Project setup
 ```
