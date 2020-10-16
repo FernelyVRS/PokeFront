@@ -3,8 +3,8 @@
 
       <div class="column is-half is-offset-one-quarter">
 
-        <h4 class="is-size-4">Pokebusqueda</h4>
-        <input class="input is-rounded" type="text" placeholder="Ej: pikachu" v-model="buscar">
+        <h4 class="is-size-3">Pokebusqueda</h4>
+        <input class="input is-rounded" type="text" placeholder="Buscar por nombre (Ej: pikachu)" v-model="buscar">
         <!--<button id="btnBuscar" class="button is-fullwidth is-danger">Buscar</button>-->
         <div v-for="(poke,index) in resultadoBusqueda" :key="index">
               <Pokemon :name="poke.name" :url="poke.url" :num="index+1"/>
@@ -28,7 +28,7 @@ export default {
   },
   //consumiendo api 
   created:function(){
-    axios.get("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0").then(res => {
+    axios.get("https://localhost:44379/api/pokemon").then(res => {
       this.pokemons = res.data.results;
     })
   },

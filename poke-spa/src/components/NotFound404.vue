@@ -5,7 +5,8 @@
             <div>
                 <h1>Hmmmm..</h1>
                 <p class="mb-3">Seems like an error</p>
-                <a href="/" class="bg-90 text-white no-underline text-90 px-2 py-1 text-sm rounded">Go Home</a>
+                
+                <router-link :to="{path: '/'}" class="bg-90 text-white no-underline text-90 px-2 py-1 text-sm rounded">Go Home</router-link>
             </div>
         </div>
     </div>
