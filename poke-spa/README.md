@@ -1,4 +1,6 @@
-# poke-spa
+# PokeSPApa
+
+Single page application que consume la api de [PokeApi](https://pokeapi.co/) y enlista los pokemones 
 
 ## Project setup
 ```
