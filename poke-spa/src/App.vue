@@ -1,12 +1,8 @@
 <template>
-  
-  
   <div id="app">
     
     <AppNavigation/>
     <router-view></router-view>
-    <img alt="Vue logo" src="./assets/logo.png">
-  
   </div>
 </template>
 
@@ -15,6 +11,7 @@ import AppNavigation from './components/AppNavigation'
 
 export default {
   name: 'App',
+  
   components: {
     AppNavigation
   }

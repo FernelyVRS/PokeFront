@@ -6,11 +6,11 @@ import "../node_modules/bulma/css/bulma.css"
 
 // compo
 import  AppNavigation from './components/AppNavigation';
-import Hello from './components/HelloWorld'
+import Home from './components/Home'
 import NotFound404 from './components/NotFound404'
 
 Vue.component("AppNavigation", AppNavigation);
-Vue.component('HW', Hello)
+Vue.component('Home', Home)
 Vue.component('not', NotFound404)
 
 // Rutas 
@@ -19,7 +19,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {path: '/', component:AppNavigation},
-  {path: '/hw', component:Hello},
+  {path: '/home', component:Home},
   {path: '*', component:NotFound404}
 ]
 
