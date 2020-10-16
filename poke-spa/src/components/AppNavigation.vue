@@ -16,8 +16,8 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
       
-      <router-link :to="{path: '/'}" class="navbar-item" >Pokemon</router-link>
-      <router-link :to="{path: 'hw'}" class="navbar-item" >Otro</router-link>
+      <router-link :to="{path: '/'}" class="navbar-item" >Home</router-link>
+      <router-link :to="{path: '/about'}" class="navbar-item" >About</router-link>
       
       
     </div>

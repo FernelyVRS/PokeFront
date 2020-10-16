@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
+  <div id="home">
+
       <div class="column is-half is-offset-one-quarter">
-        <div v-for="(poke,index) in pokemons" :key="index">
+
+        <h4 class="is-size-4">Pokebusqueda</h4>
+        <input class="input is-rounded" type="text" placeholder="Ej: pikachu" v-model="buscar">
+        <!--<button id="btnBuscar" class="button is-fullwidth is-danger">Buscar</button>-->
+        <div v-for="(poke,index) in resultadoBusqueda" :key="index">
               <Pokemon :name="poke.name" :url="poke.url" :num="index+1"/>
         </div>
       </div>
@@ -17,20 +22,42 @@ export default {
   name: 'App',
   data(){
     return{
-      pokemons:[]
+      pokemons:[],
+      buscar: ''
     }
   },
+  //consumiendo api 
   created:function(){
     axios.get("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0").then(res => {
-      console.log(res.data.results);
       this.pokemons = res.data.results;
     })
   },
   components: {
     Pokemon
+  },
+  computed:{
+      resultadoBusqueda: function(){
+          if(this.buscar =='' || this.buscar== ' '){
+              return this.pokemons;
+          }else{
+              return this.pokemons.filter(pokemon => pokemon.name == this.buscar)
+          }
+      }
   }
 }
 </script>
-
-<style>
+    
+<style scoped>
+    #home{
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+    #btnBuscar{
+       margin-top: 2%; 
+    }
+    
 </style>
