@@ -28,7 +28,7 @@ export default {
   },
   //consumiendo api 
   created:function(){
-    axios.get("https://localhost:44379/api/pokemon").then(res => {
+    axios.get("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0").then(res => {
       this.pokemons = res.data.results;
     })
   },
