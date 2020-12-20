@@ -1,5 +1,8 @@
 # PokeSPA
 
+![alt text](https://raw.githubusercontent.com/FernelyVRS/PokeSPA/main/poke-spa/screenshott.gif) 
+
+
 Single page application creada con Vuejs CLI y Bulma que consume la api de [PokeApi](https://pokeapi.co/) y enlista los pokemones 
 
 ## Project setup
